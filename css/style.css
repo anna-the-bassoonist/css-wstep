@@ -1,3 +1,16 @@
 * {
     color: red;
 }
+li.list-item {
+    color: green;
+}
+
+ul {
+    list-style: none; 
+    
+}
+/*selektor klaasy  z pseudoelementem*/
+/*pseudoelementy należą do znacznika-ważne!*/
+.list-item::before {
+    content: '*';
+}
