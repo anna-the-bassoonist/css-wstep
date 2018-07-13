@@ -1,16 +1,110 @@
 * {
     color: red;
 }
+
 li.list-item {
     color: green;
 }
 
 ul {
-    list-style: none; 
-    
+    list-style: none;
+
 }
-/*selektor klaasy  z pseudoelementem*/
+
+/*selektor klasy  z pseudoelementem*/
+
 /*pseudoelementy należą do znacznika-ważne!*/
+
 .list-item::before {
     content: '*';
 }
+
+.list-item a:hover {
+    color: yellow;
+}
+
+input:focus {
+    border: 2px solid red;
+}
+
+ul li:first-child,
+ul li:last-child {
+    color: blue;
+}
+
+/*
+.list-item:nth-of-type(even) a{
+    color: blueviolet;
+}*/
+
+/*  co trzeci od drugiego ma kolor blueviolet: (3n + 2):
+.list-item:nth-of-type(3n + 2) a{
+    color: blueviolet;
+}*/
+
+li:nth-child(3n + 2) a {
+    color: blueviolet;
+}
+
+input[title] {
+    border: 5px solid yellow;
+}
+
+input[title="drugi"] {
+    border: 5px solid red;
+}
+
+input[title ~ ="opis"] {
+    border: 5px solid violet;
+}
+
+/*z * łapie po kawałku nazwy-ciągu znaków:*/
+
+input[title*="wart"] {
+    border: 5px solid grey;
+}
+
+/*zaczyna się na ciąg znaków:*/
+
+input[title^="pie"] {
+    border: 5px solid blue;
+}
+
+/*kończy się na ciąg znaków:*/
+
+input[title$="y"] {
+    border: 5px solid green;
+}
+
+#pozycje{
+    height: 300px;
+    background-color: green;
+    position: relative;
+
+}
+
+#pozycje .blue{
+    background-color: blue;
+}
+#pozycje .red{
+    background-color: red;
+    left: 100px;
+    top:35px;
+    position: absolute;
+    margin: 0;
+    
+}
+#pozycje p {
+        color: white;
+}
+
+#main-nav {
+    position: fixed;
+    z-index:999999;
+    width: 100%;
+    left: 0;
+    right: 0;
+    background-color: limegreen;
+}
+
+
